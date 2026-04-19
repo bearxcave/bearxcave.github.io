@@ -1,0 +1,19 @@
+- name: Gomoku
+  type: Browser Game
+  summary: A playable five-in-a-row game built into the site.
+  tech:
+    - HTML
+    - JavaScript
+    - CSS
+  demo_url: /software/gomoku/
+  demo_label: Play
+
+- name: Gomoku Python
+  type: Browser Game
+  summary: The same game with the rules powered by Python in the browser.
+  tech:
+    - Python
+    - Pyodide
+    - JavaScript
+  demo_url: /software/gomoku_python/
+  demo_label: Play

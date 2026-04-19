@@ -1,0 +1,46 @@
+title: BEARXCAVE
+description: Bearxcave
+url: ""
+baseurl: ""
+markdown: kramdown
+permalink: /blog/:title/
+theme: null
+highlighter: rouge
+lsi: false
+excerpt_separator: "\n\n"
+incremental: false
+
+kramdown:
+  input: GFM
+  hard_wrap: false
+  auto_ids: true
+  footnote_nr: 1
+  entity_output: as_char
+  toc_levels: 1..6
+  smart_quotes: lsquo,rsquo,ldquo,rdquo
+  enable_coderay: false
+#  parse_block_html: true # default for kramdown is false. This will enable using Markdown linkso
+  syntax_highlighter: rouge
+
+collections:
+  pages:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+    values:
+      layout: page
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: post
+
+navigation:
+  - title: Home
+    url: /
+  - title: Blog
+    url: /blog/
+  - title: Software
+    url: /software/

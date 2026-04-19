@@ -1,0 +1,47 @@
+---
+layout: default
+title: Gomoku Python
+---
+
+<section class="page-intro">
+  <p class="eyebrow">Software</p>
+  <h1>Gomoku Python</h1>
+  <p>The same game, with Python running the core logic.</p>
+</section>
+
+<section class="gomoku-layout">
+  <article class="gomoku-panel">
+    <div class="gomoku-meta">
+      <p class="section-label">Game</p>
+      <h2>Python-powered board</h2>
+      <p class="gomoku-status" id="gomoku-python-status">Loading Python engine...</p>
+    </div>
+
+    <div class="gomoku-board-wrap">
+      <div
+        class="gomoku-board"
+        id="gomoku-python-board"
+        role="grid"
+        aria-label="Gomoku Python board"
+        data-python-src="{{ '/assets/python/gomoku_core.py' | relative_url }}"
+      ></div>
+    </div>
+
+    <div class="gomoku-actions">
+      <button class="button" id="gomoku-python-reset" type="button">New game</button>
+    </div>
+  </article>
+
+  <aside class="gomoku-panel">
+    <p class="section-label">Core</p>
+    <h2>How it works</h2>
+    <ul class="feature-list">
+      <li>The board UI is rendered in HTML and JavaScript.</li>
+      <li>The move rules and win check run in Python.</li>
+      <li>Pyodide loads Python into the browser at runtime.</li>
+    </ul>
+  </aside>
+</section>
+
+<script src="https://cdn.jsdelivr.net/pyodide/v0.27.2/full/pyodide.js"></script>
+<script src="{{ '/assets/js/gomoku_python.js' | relative_url }}" defer></script>

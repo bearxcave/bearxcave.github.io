@@ -1,0 +1,40 @@
+---
+layout: default
+title: Gomoku
+---
+
+<section class="page-intro">
+  <p class="eyebrow">Software</p>
+  <h1>Gomoku</h1>
+  <p>Place five stones in a row to win.</p>
+</section>
+
+<section class="gomoku-layout">
+  <article class="gomoku-panel">
+    <div class="gomoku-meta">
+      <p class="section-label">Game</p>
+      <h2>Play in the browser</h2>
+      <p class="gomoku-status" id="gomoku-status">Black to move.</p>
+    </div>
+
+    <div class="gomoku-board-wrap">
+      <div class="gomoku-board" id="gomoku-board" role="grid" aria-label="Gomoku board"></div>
+    </div>
+
+    <div class="gomoku-actions">
+      <button class="button" id="gomoku-reset" type="button">New game</button>
+    </div>
+  </article>
+
+  <aside class="gomoku-panel">
+    <p class="section-label">Rules</p>
+    <h2>How it works</h2>
+    <ul class="feature-list">
+      <li>Players take turns placing black and white stones.</li>
+      <li>Five in a row wins.</li>
+      <li>Rows can be horizontal, vertical, or diagonal.</li>
+    </ul>
+  </aside>
+</section>
+
+<script src="{{ '/assets/js/gomoku.js' | relative_url }}" defer></script>

@@ -1,0 +1,131 @@
+---
+layout: default
+---
+
+<style>
+* {
+box-sizing: border-box;
+}
+
+
+.tags {
+margin-bottom: -5px;
+}
+div {
+display: block;
+}
+
+
+.highlight pre, pre, .highlight .hll {
+background-color: #f8f8f8;
+border: 1px solid #ccc;
+padding: 6px 10px;
+border-radius: 3px;
+}
+.highlight pre code {
+white-space: pre;
+}
+.highlight pre {
+overflow-x: auto;
+}
+pre code {
+display: block;
+width: auto;
+word-wrap: normal;
+padding: 0;
+font-size: inherit;
+color: inherit;
+white-space: pre-wrap;
+background-color: transparent;
+border-radius: 0;
+}
+code {
+padding: 2px 4px;
+font-size: 90%;
+color: #c7254e;
+background-color: #f9f2f4;
+border-radius: 4px;
+}
+code, pre {
+font-family: Menlo,Monaco,Consolas,"Courier New",monospace;
+}
+
+
+.post-container ul, .post-container ol {
+margin-bottom: 40px;
+}
+.pager {
+margin: 20px 0 0!important;
+padding: 0!important;
+text-align: center;
+list-style: none;
+}
+.pager:before {
+display: table;
+content: " ";
+}
+.pager:after {
+clear: both;
+}
+.pager li>a:hover, .pager li>a:focus {
+color: #fff;
+background-color: #0085a1;
+border: 1px solid #0085a1;
+}
+.post-container .pager li.previous {
+float: left;
+}
+.post-container .pager li.next {
+float: right;
+}
+.post-container .pager li {
+width: 48%;
+}
+.pager li {
+display: inline;
+}
+.post-container .pager li>a {
+width: 100%;
+}
+:-internal-direct-focus {
+outline-color: -webkit-focus-ring-color;
+outline-style: auto;
+outline-width: 5px;
+}
+::selection {
+color: #fff;
+text-shadow: none;
+background: #0085a1;
+}
+ul, menu, dir {
+display: block;
+margin-inline-start: 0px;
+margin-inline-end: 0px;
+padding-inline-start: 40px;
+}
+
+li ol li{
+list-style-type: lower-alpha;
+}
+li ol li ol li{
+list-style-type: lower-roman;
+}
+</style>
+
+<article class="post">
+  <p class="post-meta">{{ page.date | date: "%B %-d, %Y" }}</p>
+  <h1>{{ page.title }}</h1>
+  {{ content }}
+</article>
+
+{% if page.uselatex %}
+<script src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML" type="text/javascript"></script>
+<script type="text/x-mathjax-config">
+    MathJax.Hub.Config({
+        tex2jax: {
+        skipTags: ['script', 'noscript', 'style', 'textarea', 'pre'],
+        inlineMath: [['$','$']]
+        }
+    });
+</script>
+{% endif %}

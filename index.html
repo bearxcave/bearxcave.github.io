@@ -1,0 +1,40 @@
+---
+layout: default
+title: Home
+---
+
+<section class="hero">
+  <div class="hero-copy">
+    <p class="eyebrow">Thoughts about science and technology</p>
+    <h1>Welcome to Bearxcave!</h1>
+    <p class="hero-text">A simple site for daily thougths and demos.</p>
+  </div>
+</section>
+
+<section class="section-grid">
+  <article class="card">
+    <p class="section-label">Blog</p>
+    <h2>Recent posts</h2>
+    <ul class="stack-list">
+      {% for post in site.posts limit:3 %}
+        <li>
+          <a href="{{ post.url | relative_url }}">{{ post.title }}</a>
+          <span>{{ post.date | date: "%b %-d, %Y" }}</span>
+        </li>
+      {% endfor %}
+    </ul>
+  </article>
+
+  <article class="card">
+    <p class="section-label">Software</p>
+    <h2>Featured demos</h2>
+    <div class="demo-mini-list">
+      {% for demo in site.data.demos limit:2 %}
+        <div>
+          <strong>{{ demo.name }}</strong>
+          <p>{{ demo.summary }}</p>
+        </div>
+      {% endfor %}
+    </div>
+  </article>
+</section>
