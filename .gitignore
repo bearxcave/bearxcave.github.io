@@ -1,5 +1,13 @@
 _site/
+submit.sh
+.gitignore
+
 .bundle/
 .jekyll-cache/
 .jekyll-metadata
 vendor/
+
+### macOS ###
+*.DS_Store
+.AppleDouble
+.LSOverride
